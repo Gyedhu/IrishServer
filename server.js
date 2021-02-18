@@ -9,8 +9,6 @@ app.use(parser.json());
 
 const port = process.env.PORT || 8080;
 
-app.get("/", () => console.log("..."))
-
 app.post("/get-file", async (req, res) => {
   const { url } = req.body;
   try {
