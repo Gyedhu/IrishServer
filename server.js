@@ -7,6 +7,8 @@ const app = express()
 app.use(cors());
 app.use(parser.json());
 
+const port = process.env.PORT || 8080;
+
 app.get("/", () => console.log("..."))
 
 app.post("/get-file", async (req, res) => {
@@ -21,4 +23,4 @@ app.post("/get-file", async (req, res) => {
 
 })
 
-app.listen(5000);
+app.listen(port, () => console.log(`server is running in port : ${port}`));
